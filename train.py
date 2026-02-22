@@ -18,11 +18,11 @@ class Config:
     output_dir = "mc_block_model_conditional"
     image_size = 128
     
-    # 5090 优化参数
-    train_batch_size = 128
-    learning_rate = 2e-4
+    # 优化参数
+    train_batch_size = 256
+    learning_rate = 4e-4
     num_epochs = 300  # 增加轮数以增强泛化性推理能力
-    save_every_epochs = 20
+    save_every_epochs = 10
     mixed_precision = "bf16" 
     num_workers = 8
 
@@ -92,6 +92,9 @@ def train():
         up_block_types=("UpBlock2D", "CrossAttnUpBlock2D", "UpBlock2D", "UpBlock2D", "UpBlock2D"),
         cross_attention_dim=128, # 语义向量维度
     )
+    
+    # 启用梯度检查点，减少显存占用
+    model.enable_gradient_checkpointing() 
 
     # 2. 语义 Embedding 层：将 ID 映射为向量
     # 6 个方块(含none) x 128维度

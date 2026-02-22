@@ -108,8 +108,6 @@ EXCLUDED_PAIRS = [
 
 ### 租服务器
 
-![image-20260205122131516](./assets/image-20260205122131516-1771577085464-10.png)
-
 ![image-20260205123656983](./assets/image-20260205123656983.png)
 
 ![image-20260205123915702](./assets/image-20260205123915702.png)
@@ -130,5 +128,17 @@ EXCLUDED_PAIRS = [
 
 ```shell
 source /etc/network_turbo
+```
+
+下载仓库
+
+```shell
+git clone https://github.com/HaiPenglai/BlockCraft-DDPM
+```
+
+安装没有预装的库
+
+```shell
+pip install accelerate diffusers
 ```
 
