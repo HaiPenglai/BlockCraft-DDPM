@@ -8,7 +8,7 @@ from PIL import Image, ImageEnhance
 TEXTURE_DIR = "block_textures"
 OUTPUT_DIR = "dataset"
 IMAGE_SIZE = 128
-SAMPLES_PER_BLOCK = 200
+SAMPLES_PER_BLOCK = 100
 
 SELECTED_BLOCKS = [
     "diamond_ore.png", # 钻石矿
@@ -16,6 +16,21 @@ SELECTED_BLOCKS = [
     "brick.png", # 红砖块
     "cobblestone.png", # 圆石
     "planks_oak.png", # 橡木板
+    "stone.png",            # 石头
+    "dirt.png",             # 泥土
+    "sand.png",             # 沙子
+    "gravel.png",           # 沙砾
+    "bedrock.png",          # 基岩
+    "iron_ore.png",         # 铁矿石
+    "gold_ore.png",         # 金矿石
+    "coal_ore.png",         # 煤矿石
+    "lapis_block.png",      # 青金石块
+    "obsidian.png",         # 黑曜石
+    "glass.png",            # 玻璃 (透明特征学习)
+    "stonebrick.png",       # 石砖
+    "netherrack.png",       # 下界岩
+    "bookshelf.png",        # 书架 (纹理较复杂，适合挑战模型)
+    "glowstone.png",        # 萤石 (高亮度和复杂纹理)
 ]
 
 def find_coeffs(pa, pb):
