@@ -20,9 +20,9 @@ class Config:
     image_size = 128
     
     # 训练参数
-    train_batch_size = 64  # RTX 5090 显存非常大，64或128都可以轻松应对
+    train_batch_size = 96  # 条件DDPM显存占用更多,对于5090batch size=96刚刚好
     learning_rate = 1e-4
-    num_epochs = 200       # 遵循你之前成功的200轮经验
+    num_epochs = 200       # 遵循之前成功的200轮经验
     save_every_epochs = 10 # 每10轮保存并测试
     mixed_precision = "bf16" # RTX 5090 支持 bf16，速度更快
     num_workers = 8

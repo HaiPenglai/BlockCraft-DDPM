@@ -3,11 +3,12 @@
 /dataset_pairs/
 
 # --- 模型输出目录 (权重文件动辄 GB 级，排除) ---
-/mc_block_model_conditional/
+/mc_blocks_ddpm_cond/
 
 # --- 采样图与最终结果 (图片多且杂，排除) ---
-/samples/
+/samples_mc/
 /final_results/
+/fusion_results/
 
 # --- 训练日志 (如果后续用了 tensorboard) ---
 /runs/

@@ -10,7 +10,7 @@ import numpy as np
 
 # --- 1. 配置参数 ---
 # 指向你想读取的 epoch 模型路径 (比如 epoch_200 效果最好，就改成 200)
-EPOCH_TO_LOAD = 200 
+EPOCH_TO_LOAD = 200
 MODEL_PATH = f"mc_blocks_ddpm_cond/epoch_{EPOCH_TO_LOAD:03d}/model.pt" 
 MAPPING_PATH = "mc_blocks_ddpm_cond/class_mapping.json"
 OUTPUT_DIR = "final_results"
@@ -63,10 +63,26 @@ def generate():
     # 3. 指定你想生成的方块列表
     # 你可以在这里修改你想生成的方块，比如我要生成 1个钻石、1个红砖块
     tasks = [
-        "diamond_ore",
-        "brick",
-        "bookshelf",
-        "obsidian"
+        "diamond_ore", # 钻石矿
+        "emerald_block", # 绿宝石块
+        "brick", # 红砖块
+        "cobblestone", # 圆石
+        "planks_oak", # 橡木板
+        "stone",            # 石头
+        "dirt",             # 泥土
+        "sand",             # 沙子
+        "gravel",           # 沙砾
+        "bedrock",          # 基岩
+        "iron_ore",         # 铁矿石
+        "gold_ore",         # 金矿石
+        "coal_ore",         # 煤矿石
+        "lapis_block",      # 青金石块
+        "obsidian",         # 黑曜石
+        "glass",            # 玻璃 (透明特征学习)
+        "stonebrick",       # 石砖
+        "netherrack",       # 下界岩
+        "bookshelf",        # 书架 (纹理较复杂，适合挑战模型)
+        "glowstone",        # 萤石 (高亮度和复杂纹理)
     ]
 
     print(f"🚀 开始生成图片 (CFG Scale: {GUIDANCE_SCALE}, 步数: {INFERENCE_STEPS})")
